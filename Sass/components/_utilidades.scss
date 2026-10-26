@@ -1,0 +1,60 @@
+//Medidad base
+$espacio-base: 0.5rem;
+
+//Margen Inferior con bucle for
+@for $i from 1 through 4 {
+    .mb-#{$i} {
+        margin-bottom: $i * $espacio-base ;
+    }
+}
+
+//Margen Superior con bucle for
+@for $i from 1 through 4 {
+    .mt-#{$i} {
+        margin-top: $i * $espacio-base ;
+    }
+}
+
+//Gap con bucle for
+@for $i from 1 through 4 {
+    .g-#{$i} {
+        gap: $i * $espacio-base ;
+    }
+}
+
+//Gap con bucle for
+@for $i from 1 through 4 {
+    .g-#{$i} {
+        gap: $i * $espacio-base ;
+    }
+}
+
+//Padding-to con bucle for
+@for $i from 1 through 4 {
+    .pt-#{$i} {
+        padding-top: $i * $espacio-base ;
+    }
+}
+
+//Padding-bottom con bucle for
+@for $i from 1 through 4 {
+    .pb-#{$i} {
+        padding-bottom: $i * $espacio-base ;
+    }
+}
+
+//Padding hacia eje x con bucle for
+@for $i from 1 through 4 {
+    .px-#{$i} {
+        padding-right: $i * $espacio-base ;
+        padding-left: $i * $espacio-base ;
+    }
+}
+
+//Padding hacia eje y con bucle for
+@for $i from 1 through 4 {
+    .py-#{$i} {
+        padding-top: $i * $espacio-base ;
+        padding-bottom: $i * $espacio-base ;
+    }
+}

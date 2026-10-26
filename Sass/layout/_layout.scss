@@ -1,0 +1,48 @@
+.layout-grid {
+    display: grid;
+
+    grid-template-rows: auto 1fr auto;
+    //completar el espacio
+    min-height: 100vh;
+
+    //Asignacion de los nombres par alas areas
+    grid-template-areas: 'header' 'main' 'footer';
+
+}
+
+//conexion de las areas
+.main-header {
+    grid-area: header;
+}
+
+.main-footer {
+    grid-area: footer;
+}
+
+.main-container {
+    grid-area: main;
+}
+
+//grid para distribuir la seccion-uno
+.grid-dos-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+//Grid par adistribuir la seccion-dos
+.grid-tres-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; //en una sola columna 
+        gap: 15px;
+    }
+}

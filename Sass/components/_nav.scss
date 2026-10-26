@@ -1,0 +1,59 @@
+@mixin nav-base {
+    ul {
+        display: flex;
+        flex-direction: row;
+        color: $link-color;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    li {
+        a {
+            color: $link-color;
+            display: block;
+            padding: 10px;
+        }
+
+        &:hover {
+            background: $btn-color-primary;
+        }
+    }
+}
+
+.header-nav {
+    @include nav-base;
+
+    &.nav-mobile {
+
+        ul {
+
+            //Fdormato del menu desplegable
+            @media (max-width: 480px) {
+                visibility: hidden;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 100%;
+                right: 0;
+                border-radius: 0 0 0 10px;
+                background: $btn-color-primary;
+                width: 40%;
+                transform-origin: top;
+                transform: scaleY(0);
+            }
+        }
+
+        // mostrar menu-mobile
+        &.open {
+            ul {
+                @media (max-width: 480px) {
+                    visibility: visible;
+                    transform: scaleX(1);
+                    transition: transform 0.3s ease, visibility 0.3s ease;
+                }
+            }
+        }
+    }
+}

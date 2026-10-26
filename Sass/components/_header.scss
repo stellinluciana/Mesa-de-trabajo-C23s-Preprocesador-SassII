@@ -1,0 +1,26 @@
+@mixin header-base {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+}
+
+.main-header {
+    position: relative;
+    @include header-base;
+
+    &-title {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    //Header fijo en modo mobile
+    @media (max-width: 480px) {
+        position: sticky;
+        top: 0;
+    }
+
+}

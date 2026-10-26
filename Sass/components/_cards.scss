@@ -1,0 +1,40 @@
+.card {
+    &-container {
+        background-color: $color-card;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: start;
+        padding: 1rem;
+    }
+
+    //armado de circulo sobre el numero
+    &-number {
+        background-color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -5px 0px 8px $btn-color-primary;
+        border-radius: 50%;
+
+    }
+
+    //Titulo de tarjeta
+    &-title {
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    //Descripcion
+    &-description {
+        margin-top: auto;
+    }
+
+
+}
